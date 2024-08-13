@@ -522,9 +522,8 @@ This setup effectively blocks only Example.net while permitting all other traffi
 
 
 
+ - Ensure the block rule is above the allow-all rule. Use the arrow buttons to adjust if necessary
 
-
-38
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/OS3qxNR.png">
@@ -535,10 +534,7 @@ This setup effectively blocks only Example.net while permitting all other traffi
 
 
 
-
-
-
-39
+ - Click "Apply Changes" at the top of the page
 <p align="center">
 <br/>
 <img width="680" alt="Portfolio" src="https://i.imgur.com/qzyLdb6.png">
@@ -547,29 +543,31 @@ This setup effectively blocks only Example.net while permitting all other traffi
 <br />
 <br />
 
+---
+## Host Network Configuration
 
 
 
 
-
-40
+ - Let's examine our host computer's current network configuration. Open a command prompt on your machine and type `ipconfig /all`. 
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/KEKaJGz.png">
 <br />
+ 
+Currently, the host machine is likely communicating directly with the router. Our goal is to redirect this traffic through our pfSense firewall.
+
+
 <br />
 <br />
 <br />
+<br />
 
+ - To help you understand, I've created a diagram:
 
-
-
-
-
-41
 <p align="center">
 <br/>
-<img width="597" alt="Portfolio" src="https://i.imgur.com/TMJsTNr.png">
+<img width="450" alt="Portfolio" src="https://i.imgur.com/TMJsTNr.png">
 <br />
 <br />
 <br />
