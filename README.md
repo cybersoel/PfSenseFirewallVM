@@ -29,7 +29,7 @@
 - [Identifying the target website's IP address](#identifying-the-target-websites-ip-address)
 - [Creating an Alias](#creating-an-alias)
 - [Creating a Blocking Rule](#creating-a-blocking-rule)
-- [Creating an Allow-all Rule](#creating-an-allowall-rule)
+- [Creating an Allow-all Rule](#creating-an-allow\-all-rule)
 - [Host Network Configuration](#host-network-configuration)
 - [Changing Host's Default Gateway](#changing-hosts-default-gateway)
 - [Testing the rules](#testing-the-rules)
