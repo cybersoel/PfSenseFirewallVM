@@ -107,8 +107,8 @@
 <br />
 <br />
 
-
-7
+ - Configure network settings:
+    - Change the network adapter from NAT to "Bridged" *(This allows the pfSense VM to obtain its own IP address on your network)*
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/55Cq8Ba.png">
@@ -118,8 +118,14 @@
 <br />
 
 
+---
+## pfSense Installation
 
-8
+<br />
+<br />
+
+
+ - Power on the virtual machine
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/g89VsPr.png">
@@ -129,7 +135,7 @@
 <br />
 
 
-9
+ - Accept default options (the first row options) throughout the installation process
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/teO8jSL.png">
@@ -139,8 +145,8 @@
 <br />
 
 
-
-10
+ - when you see a screen like below:
+    - Press the spacebar to select all(*)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/YCGvcHf.png">
@@ -149,8 +155,9 @@
 <br />
 <br />
 
+ - Choose "Yes" to destroy the current contents of the disk
+ - Allow the installation to complete and the VM to reboot
 
-11
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/IQdONuX.png">
@@ -159,9 +166,15 @@
 <br />
 <br />
 
+---
+## pfSense Network Interface Setup
+
+<br />
+<br />
 
 
-12
+ - VLAN configuration:
+    - When asked "Should VLANs be set up now?", type "n" for no
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/ij7Zqwg.png">
@@ -170,8 +183,9 @@
 <br />
 <br />
 
-
-13
+ - Interface assignment:
+    - For WAN interface, type "em0" (visible in the Valid interface options at the top of your screen)
+    - For LAN interface, press Enter to skip (we'll use only one interface for this setup)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/3m5FpSS.png">
@@ -181,7 +195,8 @@
 <br />
 
 
-14
+ - Remember the assigned IP address:
+    - You should see the em0 interface configured with an IP (e.g., 192.168.1.185/24)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/xMBhgCH.png">
@@ -190,8 +205,21 @@
 <br />
 <br />
 
+---
+## pfSense Web Application Configuration
 
-15
+<br />
+<br />
+
+
+
+ - Accessing the pfSense web interface:
+    - Open a web browser on your host machine
+    - browse the IP address (em0 interface) we configured perviously 
+    - We will use pfSense default login credentials:
+     - *Username: admin*
+     - *Password: pfsense*
+
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/FNYQ7hn.png">
@@ -200,11 +228,8 @@
 <br />
 <br />
 
-
-
-
-
-16
+ - pfSense setup wizard:
+    - Click "Next" to start the configuration process
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/J5m8aCo.png">
@@ -213,8 +238,10 @@
 <br />
 <br />
 
-
-17
+ - General Information:
+    - Set Hostname: "pfSenseLab"
+    - Set Domain: "localdomain"
+    - Primary & Second DNS Server: 8.8.8.8 (Google's public DNS)
 <p align="center">
 <br/>
 <img width="540" alt="Portfolio" src="https://i.imgur.com/PSsa1JD.png">
@@ -224,8 +251,9 @@
 <br />
 
 
+ - Time server configuration:
+    - Leave default NTP servers or add your preferred time servers
 
-18
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/FXTXVDx.png">
