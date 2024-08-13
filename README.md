@@ -42,8 +42,8 @@
  - Download the pfSense ISO file.
    - Visit the official pfSense website (https://www.pfsense.org/download/)
    - Alternatively, use this direct link to bypass data collection: https://repo.ialab.dsu.edu/pfsense/
-     - Choose the latest version.iso.gz file
-     - After downloading, extract the file using 7-Zip or a similar tool
+     - *Choose the latest version.iso.gz file*
+     - *After downloading, extract the file using 7-Zip or a similar tool*
 
 <p align="center">
 <br/>
