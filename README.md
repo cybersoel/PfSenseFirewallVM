@@ -206,7 +206,7 @@
 <br />
 
 ---
-## pfSense Web Interface Configuration
+## pfSense Web Interface Setup
 
 <br />
 <br />
@@ -298,6 +298,12 @@
 <br />
 <br />
 
+---
+## Understanding Key Firewall Rule Parameters
+
+
+<br />
+<br />
 
 
  - Let's make a new firewall rule! Navigate to Firewall > Rules
@@ -320,11 +326,7 @@
 <br />
 <br />
 
----
-## Understanding Key Firewall Rule Parameters
 
-<br />
-<br />
 
  - Action: Our firewall rule can take three actions against specified network traffic:
     - Pass: Allow traffic
