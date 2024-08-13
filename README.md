@@ -555,7 +555,7 @@ This setup effectively blocks only Example.net while permitting all other traffi
 <img width="597" alt="Portfolio" src="https://i.imgur.com/KEKaJGz.png">
 <br />
  
-Currently, the host machine is likely communicating directly with the router. Our goal is to redirect this traffic through our pfSense firewall.
+Currently, the host machine is communicating directly with the router. Our goal is to redirect this traffic through our pfSense firewall.
 
 
 <br />
@@ -567,18 +567,20 @@ Currently, the host machine is likely communicating directly with the router. Ou
 
 <p align="center">
 <br/>
-<img width="450" alt="Portfolio" src="https://i.imgur.com/TMJsTNr.png">
+<img width="500" alt="Portfolio" src="https://i.imgur.com/TMJsTNr.png">
 <br />
 <br />
 <br />
 <br />
 
+---
+## Changing Host's Default Gateway
+
+<br />
+<br />
 
 
-
-
-
-42
+ - Press Win+R, type `ncpa.cpl`, and press Enter
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/yDMYKxy.png">
@@ -589,10 +591,7 @@ Currently, the host machine is likely communicating directly with the router. Ou
 
 
 
-
-
-
-43
+ - Right-click your active network adapter. Select "Properties"
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/6uH2zZJ.png">
@@ -602,11 +601,8 @@ Currently, the host machine is likely communicating directly with the router. Ou
 <br />
 
 
-
-
-
-
-44
+ - Select "Internet Protocol Version 4 (TCP/IPv4)" and click "Properties"
+ - Change "Default gateway" to pfSense VM's IP address (e.g., 192.168.1.185)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/2XTTozG.png">
@@ -616,11 +612,7 @@ Currently, the host machine is likely communicating directly with the router. Ou
 <br />
 
 
-
-
-
-
-45
+ -  Run `ipconfig /all` one more time to check if the default gateway is configured correctly.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/YAynYah.png">
@@ -628,13 +620,19 @@ Currently, the host machine is likely communicating directly with the router. Ou
 <br />
 <br />
 <br />
+ 
+We should see the IP address of the pfSense VM. Now, our host network traffic goes via pfSense to the router and the internet!
 
+---
+## Testing the rules
 
+<br />
+<br />
 
-
-
-
-46
+ - Test the configuration:
+    - Browse to various websites to ensure general internet access
+    - Attempt to access the blocked website - it should not load
+    - This confirms your pfSense firewall is working as intended!
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/8Md7kg5.png">
