@@ -300,7 +300,7 @@
 
 
 
-
+ - Let's make a new firewall rule! Navigate to Firewall > Rules
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/K1tY1ui.png">
@@ -311,10 +311,7 @@
 
 
 
-
-
-
-23
+ - Click ADD at the bottom of the screen. You will see many firewall options that can be configured. We will learn what each section means.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/tt51UUx.png">
@@ -323,12 +320,16 @@
 <br />
 <br />
 
+---
+## Understanding Key Firewall Rule Parameters
 
+<br />
+<br />
 
-
-
-
-24
+ - Action: Our firewall rule can take three actions against specified network traffic:
+    - Pass: Allow traffic
+    - Block: Silently drop traffic
+    - Reject: Drop traffic and notify the source
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/CE8SJXK.png">
