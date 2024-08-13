@@ -34,7 +34,16 @@
 
 ---
 
-2
+## Downloading pfSense file
+
+<br />
+<br />
+
+ - Download the pfSense ISO file.
+   - Visit the official pfSense website (https://www.pfsense.org/download/)
+   - Alternatively, use this direct link to bypass data collection: https://repo.ialab.dsu.edu/pfsense/
+     - Choose the latest version.iso.gz file
+     - After downloading, extract the file using 7-Zip or a similar tool
 
 <p align="center">
 <br/>
@@ -44,9 +53,14 @@
 <br />
 <br />
 
+---
+## pfSense VM configuration
+
+<br />
+<br />
 
 
-3
+ - Launch VMware Workstation or VMware Player
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/uDO11Aq.png">
@@ -55,11 +69,9 @@
 <br />
 <br />
 
-
-
-
-
-4
+ - Create a new virtual machine:
+   - Select "Custom (advanced)" setup
+   - Choose "I will install the operating system later"
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/oMng2lp.png">
@@ -68,9 +80,14 @@
 <br />
 <br />
 
-
-
-5
+ - Configure the guest OS:
+   - Select "Other" as the operating system
+   - Choose "FreeBSD 64-bit" as the version
+   - Allocate resources *(In this lab we only need the VM to have minimum performance!)*
+     - *1 GB RAM*
+     - *1 core processor*
+     - *20 GB virtual hard disk*
+   - Use default settings for other options
 <p align="center">
 <br/>
 <img width="480" alt="Portfolio" src="https://i.imgur.com/gVvqTdN.png">
@@ -79,8 +96,9 @@
 <br />
 <br />
 
-
-6
+ - Edit virtual machine settings:
+   - Navigate to the CD/DVD section
+   - Select "Use ISO image file" and browse to the extracted pfSense ISO
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/OzPUwj8.png">
