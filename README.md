@@ -278,9 +278,7 @@
 <br />
 <br />
 
- - Set the admin password:
-    - Choose a strong, memorable password
-    - Store it securely, as you'll need it for future access
+ - Set the admin password *(Make sure you don't forget!)*
 
 <p align="center">
 <br/>
