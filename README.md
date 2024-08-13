@@ -206,7 +206,7 @@
 <br />
 
 ---
-## pfSense Web Application Configuration
+## pfSense Web Interface Configuration
 
 <br />
 <br />
@@ -340,10 +340,7 @@
 
 
 
-
-
-
-25
+ - "Disabled" checkbox allows you to create inactive rules for future use
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/NMNDPVo.png">
@@ -353,11 +350,7 @@
 <br />
 
 
-
-
-
-
-26
+ - Interface: We can choose which network interface the rule applies to (e.g., WAN, LAN). For this walkthrough, we only have a WAN interface configure. 
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/qKGuOxK.png">
@@ -367,11 +360,7 @@
 <br />
 
 
-
-
-
-
-27
+ - Address Family: We can select either IPv4, IPv6, or both for rule application
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/egtFHS2.png[">
@@ -381,11 +370,7 @@
 <br />
 
 
-
-
-
-
-28
+- Protocol: Specify which protocol(s) the rule affects (e.g., TCP, UDP, ICMP, or Any)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/AvbnDYI.png">
@@ -394,12 +379,7 @@
 <br />
 <br />
 
-
-
-
-
-
-29
+ - Source: The source of the network connection to which the rule will apply. For example, if we wanted to block connections to Facebook from this network, the source value would be 192.168.1.0/24, with a destination value of Facebook's IP range.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/yCmaXKl.png">
@@ -409,11 +389,7 @@
 <br />
 
 
-
-
-
-
-30
+ - Destination: Specify the target of traffic the rule will match. See the example under the Source heading to understand what this means.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/Np1u3IZ.png">
@@ -422,12 +398,7 @@
 <br />
 <br />
 
-
-
-
-
-
-31
+ - Logging options: We can enable logging to track when the rule is triggered. It is useful for monitoring and troubleshooting
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/7ecaTCJ.png[">
@@ -437,11 +408,7 @@
 <br />
 
 
-
-
-
-
-32
+ - Rule description: We can add a clear, concise description to help manage and understand rules
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/1asDdqO.png">
@@ -451,11 +418,17 @@
 <br />
 
 
+---
+## Identifying the target website's IP address
 
+<br />
+<br />
 
+ - Since now we understand the basics of setting up a firewall rule, let's make a rule that blocks any host in our network connecting to a specific domain.
+    - Open a command prompt on your host machine
+    - Use `ping example.com` to get the IP address of the site you want to block
+    - Note down the IP address.
 
-
-33
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/Te89Q9P.png">
@@ -465,11 +438,14 @@
 <br />
 
 
+--
+## Creating an Alias
 
+<br />
+<br />
 
-
-
-34
+ - Aliases group IPs, networks, or ports for rule management. Aliases make our lives easier. Instead of remembering IP addresses or port numbers, we can simply reference an alias we’ve created.
+ - Go to Firewall > Aliases
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/xeAsa71.png">
@@ -479,11 +455,7 @@
 <br />
 
 
-
-
-
-
-35
+ - We will create an Alias for the target website we want to block and use it as the source or destination within firewall rules. Name the Alias and enter the IP address we retrieved from pinging the website.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/oQxNm90.png">
@@ -493,11 +465,20 @@
 <br />
 
 
+---
+## Creating a Blocking Rule
 
+<br />
+<br />
 
+ - Navigate to Firewall > Rules, then click "Add" to create a new rule. Configure as follows:
+    - Action: Block
+    - Interface: WAN
+    - Protocol: Any
+    - Source: Any (192.168.1.0/24)
+    - Destination: Select your newly created alias
+ - Save the rule
 
-
-36
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/znR1Eue.png">
@@ -507,11 +488,29 @@
 <br />
 
 
+---
+## Creating an Allow-all Rule
 
+<br />
+<br />
 
+We need to add one more rule to complete our firewall configuration. Currently, we have two rules in place: our custom rule blocking traffic to Example.net, and pfSense's built-in default rule that blocks all traffic. Firewalls process rules from top to bottom, applying the first matching rule to each packet. By adding an "Allow All" rule at the bottom, we create a logical flow:
 
+<br />
 
-37
+ - First, the firewall checks if the traffic is destined for Example.net and blocks it if so.
+ - If the traffic isn't going to Example.net, it moves to the next rule, which allows everything else.
+
+<br />
+
+This setup effectively blocks only Example.net while permitting all other traffic, giving us the selective control we want over our network.
+
+<br />
+<br />
+
+ - Navigate to Firewall > Rules, then click "Add" to create a new rule.
+    - Add another rule below the blocking rule
+    - Set Action to "Pass" and leave other options as "Any"
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/Cb44JLX.png">
