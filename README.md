@@ -34,6 +34,7 @@
 
 ---
 
+[back to top](#toc)
 ## Downloading pfSense file
 
 <br />
@@ -54,6 +55,7 @@
 <br />
 
 ---
+[back to top](#toc)
 ## pfSense VM configuration
 
 <br />
@@ -119,6 +121,7 @@
 
 
 ---
+[back to top](#toc)
 ## pfSense Installation
 
 <br />
@@ -167,6 +170,7 @@
 <br />
 
 ---
+[back to top](#toc)
 ## pfSense Network Interface Setup
 
 <br />
@@ -206,6 +210,7 @@
 <br />
 
 ---
+[back to top](#toc)
 ## pfSense Web Interface Setup
 
 <br />
@@ -299,6 +304,7 @@
 <br />
 
 ---
+[back to top](#toc)
 ## Understanding Key Firewall Rule Parameters
 
 
@@ -421,6 +427,7 @@
 
 
 ---
+[back to top](#toc)
 ## Identifying the target website's IP address
 
 <br />
@@ -440,7 +447,8 @@
 <br />
 
 
---
+---
+[back to top](#toc)
 ## Creating an Alias
 
 <br />
@@ -468,6 +476,7 @@
 
 
 ---
+[back to top](#toc)
 ## Creating a Blocking Rule
 
 <br />
@@ -491,6 +500,7 @@
 
 
 ---
+[back to top](#toc)
 ## Creating an Allow-all Rule
 
 <br />
@@ -546,6 +556,7 @@ This setup effectively blocks only Example.net while permitting all other traffi
 <br />
 
 ---
+[back to top](#toc)
 ## Host Network Configuration
 
 
@@ -576,6 +587,7 @@ Currently, the host machine is communicating directly with the router. Our goal 
 <br />
 
 ---
+[back to top](#toc)
 ## Changing Host's Default Gateway
 
 <br />
@@ -626,6 +638,7 @@ Currently, the host machine is communicating directly with the router. Our goal 
 We should see the IP address of the pfSense VM. Now, our host network traffic goes via pfSense to the router and the internet!
 
 ---
+[back to top](#toc)
 ## Testing the rules
 
 <br />
