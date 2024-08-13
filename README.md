@@ -20,9 +20,21 @@
 <a name="toc"></a>
 **Table of Contents:**
 
-- 
+- [Downloading pfSense file](#downloading-pfsense-file)
+- [pfSense VM configuration](#pfsense-vm-configuration)
+- [pfSense Installation](#pfsense-installation)
+- [pfSense Network Interface Setup](#pfsense-network-interface-setup)
+- [pfSense Web Interface Setup](#pfsense-web-interface-setup)
+- [Understanding Key Firewall Rule Parameters](#understanding-key-firewall-rule-parameters)
+- [Identifying the target website's IP address](#identifying-the-target-websites-ip-address)
+- [Creating an Alias](#creating-an-alias)
+- [Creating a Blocking Rule](#creating-a-blocking-rule)
+- [Creating an Allow-all Rule](#creating-an-allowall-rule)
+- [Host Network Configuration](#host-network-configuration)
+- [Changing Host's Default Gateway](#changing-hosts-default-gateway)
+- [Testing the rules](#testing-the-rules)
 
----
+
 
 ---
 
@@ -31,8 +43,6 @@
 ---
 
 
-
----
 
 [back to top](#toc)
 ## Downloading pfSense file
