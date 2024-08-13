@@ -263,8 +263,13 @@
 <br />
 
 
+ - WAN Interface Configuration:
+    - Configure a static IP for the firewall
+    - Use the IP address from the URL bar
+    - Set the upstream gateway to your home router's IP (typically ends with .1)
+     - *Tip: Check your host computer's default gateway to confirm the router IP*
 
-19
+
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/UBoQt71.png">
@@ -273,10 +278,10 @@
 <br />
 <br />
 
+ - Set the admin password:
+    - Choose a strong, memorable password
+    - Store it securely, as you'll need it for future access
 
-
-
-20
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/N3aAMlm.png">
@@ -286,7 +291,7 @@
 <br />
 
 
-21
+ - Now let's go to the pfsense web console main page Dashboard. We can see our firewall information such as : interfaces, system, uptime, and resource usage.
 <p align="center">
 <br/>
 <img width="540" alt="Portfolio" src="https://i.imgur.com/DQjUHSQ.png">
@@ -298,9 +303,6 @@
 
 
 
-
-
-22
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/K1tY1ui.png">
